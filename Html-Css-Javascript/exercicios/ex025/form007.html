@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+</head>
+<body>
+    <h1>Exemplo de Formulário</h1>
+    <form action="cadastro.php" method="post" autocomplete="on">
+        <p>
+            <label for="iest">Estado</label>
+            <select id="iest" name="estado">
+                <option value="" selected disabled>Selecione um estado</option>
+                
+                <optgroup label="Região Norte">
+                    <option value="AC">Acre</option>
+                    <option value="AM">Amazonas</option>
+                    <option value="AP">Amapá</option>
+                    <option value="PA">Pará</option>
+                    <option value="RO">Rondônia</option>
+                    <option value="RR">Roraima</option>
+                    <option value="TO">Tocantins</option>
+                </optgroup>
+
+                <optgroup label="Região Nordeste">
+                    <option value="AL">Alagoas</option>
+                    <option value="BA">Bahia</option>
+                    <option value="CE">Ceará</option>
+                    <option value="MA">Maranhão</option>
+                    <option value="PB">Paraíba</option>
+                    <option value="PE">Pernambuco</option>
+                    <option value="PI">Piauí</option>
+                    <option value="RN">Rio Grande do Norte</option>
+                    <option value="SE">Sergipe</option>
+                </optgroup>
+
+                <optgroup label="Região Centro-Oeste">
+                    <option value="DF">Distrito Federal</option>
+                    <option value="GO">Goiás</option>
+                    <option value="MT">Mato Grosso</option>
+                    <option value="MS">Mato Grosso do Sul</option>
+                </optgroup>
+
+                <optgroup label="Região Sudeste">
+                    <option value="ES">Espírito Santo</option>
+                    <option value="MG">Minas Gerais</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="SP">São Paulo</option>
+                </optgroup>
+
+                <optgroup label="Região Sul">
+                    <option value="PR">Paraná</option>
+                    <option value="RS">Rio Grande do Sul</option>
+                    <option value="SC">Santa Catarina</option>
+                </optgroup>
+            </select>
+        </p>
+        <p>
+            <label for="iprof">Profissão</label>
+            <input type="text" id="iprof" name="prof" placeholder="Digite sua profissão" list="profi">
+            
+            <datalist id="profi">
+                <option>Administrador</option>
+                <option>Advogado</option>
+                <option>Agrônomo</option>
+                <option>Analista de Sistemas</option>
+                <option>Arquiteto</option>
+                <option>Artista</option>
+                <option>Artista Plástico</option>
+                <option>Autônomo</option>
+                <option>Biólogo</option>
+                <option>Chef de Cozinha</option>
+                <option>Cientista de Dados</option>
+                <option>Consultor</option>
+                <option>Contador</option>
+                <option>Dentista</option>
+                <option>Designer</option>
+                <option>Economista</option>
+                <option>Educador Físico</option>
+                <option>Eletricista</option>
+                <option>Enfermeiro</option>
+                <option>Engenheiro</option>
+                <option>Esteticista</option>
+                <option>Farmacêutico</option>
+                <option>Fisioterapeuta</option>
+                <option>Fotógrafo</option>
+                <option>Gerente</option>
+                <option>Jornalista</option>
+                <option>Marketing</option>
+                <option>Mecânico</option>
+                <option>Médico</option>
+                <option>Músico</option>
+                <option>Nutricionista</option>
+                <option>Policial</option>
+                <option>Professor</option>
+                <option>Programador</option>
+                <option>Psicólogo</option>
+                <option>Publicitário</option>
+                <option>Recursos Humanos</option>
+                <option>Secretário</option>
+                <option>Técnico em TI</option>
+                <option>Vendedor</option>
+                <option>Veterinário</option>
+            </datalist>
+        </p>
+        <p>
+            <label for="imsg">Mensagem</label> <br>
+            <textarea id="imsg" name="msg" placeholder="Digite sua mensagem aqui..." rows="10" cols="30"></textarea>
+        </p>
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+    </form>
+</body>
+</html>
