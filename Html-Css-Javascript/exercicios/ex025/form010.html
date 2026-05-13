@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+    <html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Formulário de Idade</title>
+    </head>
+    <body>
+        <h1>Exemplo de Formulário</h1>
+        <form action="cadastro.php" method="post" autocomplete="on">
+            <p>
+                <label for="iano">Ano de Nascimento:</label>
+                <input type="number" id="iano" name="iano"
+                min="1900" max='${anoAtual}' required placeholder="Min: 1900" 
+                oninput="calcularIdade()">     
+            </p>
+            <p>
+                <label for="iidade">Sua Idade é:</label>
+                <output id="iidade" name="iidade">0</output>
+            </p>
+            <p>
+                <input type="submit" value="Enviar">
+                <input type="reset" value="Limpar" onclick="document.getElementById('iidade').innerHTML = 0">
+            </p>
+        </form>
+
+        <script>
+            // Pegamos o ano atual do sistema
+            const anoAtual = new Date().getFullYear();
+            
+            // Configuramos o valor máximo do input dinamicamente
+            const campoAno = document.getElementById('iano');
+            campoAno.max = anoAtual;
+
+            function calcularIdade() {
+                const displayIdade = document.getElementById('iidade');
+                const anoNascimento = Number(campoAno.value);
+
+                if (anoNascimento > 0) {
+                    displayIdade.innerHTML = anoAtual - anoNascimento;
+                } else {
+                    displayIdade.innerHTML = 0;
+                }
+            }
+        </script>
+    </body>
+</html>
