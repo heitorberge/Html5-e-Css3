@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .container {
+            display: grid;
+            grid-template-rows: 25vh 12.5vh 50vh 12.5vh;
+            grid-template-columns: 3fr 1fr;
+            grid-template-areas: 
+                "topo topo"
+                "menu menu"
+                "principal secundario"
+                "rodape rodape";
+            height: 100vh;
+            width: 100vw;
+        }
+        .topo {
+            grid-area: topo;
+            border: 1px solid black;
+            background-color: rgb(124, 124, 124);
+            color: rgb(71, 71, 71);
+        }
+        .menu {
+            grid-area: menu;
+            border: 1px solid black;
+            background-color: rgb(95, 95, 95);
+            color: rgb(201, 201, 201);
+            display: flex;
+            align-items: center;
+            padding-left: 15px;
+        }
+        .principal {
+            grid-area: principal;
+            border: 1px solid black;
+        }
+        .secundario {
+            grid-area: secundario;
+            border: 1px solid black;
+        }
+        p {
+            margin-bottom: 5px
+        }
+        .rodape {
+            grid-area: rodape;
+            border: 1px solid black;
+            color: white;
+            background-color: rgb(65, 65, 65);
+            text-align: center;
+            align-items: center;
+        }
+        a {
+            color: rgb(179, 177, 177);
+            text-decoration: none;
+            font-weight: bolder;
+            transition: 0.25s;
+        }
+        a:hover {
+            color: white;
+            text-decoration: underline;
+            transition: 0.25s;
+        }
+        .menu menu ul li a {
+            display: block;
+            padding: 4vh;
+            border: 1px solid black;
+            text-align: center;
+            color:rgb(211, 211, 211);
+        }
+        .menu menu ul li a:hover {
+            background-color: rgb(124, 124, 124);
+            transition: 0.25s;
+            color: white;
+        }
+        .menu menu ul {
+            display: flex;
+            list-style-type: none;
+            gap:10px;
+        }
+        img#lyt {
+            max-width: auto;
+            max-height: 50vh;
+            width: auto;
+            height: auto;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="topo">
+            <header>
+                <h1>Grid Layout</h1>
+                <h2>Desafio 17 do curso de HTML5 e CSS3 do Curso Em Vídeo</h2>
+            </header>
+        </div>
+        <div class="menu">
+            <menu>
+                <ul>
+                    <li><a href="#">Início</a></li>
+                    <li><a href="#">Sobre</a></li>
+                    <li><a href="#">Contato</a></li>
+                </ul>
+            </menu>
+        </div>
+        <div class="principal">
+            <p>O desafio 17 consiste em criar este layout:
+                <img src="Modelo.png" alt="Layout" id="lyt">
+            </p>
+        </div>
+        <div class="secundario">
+            <p><b>Curiosidade:</b> Este site foi criado com o layout ao lado, se você olhar bem você consegue perceber.</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusantium maiores commodi ipsa. Minus atque numquam quos ipsa laborum.</p>
+        </div>
+        <div class="rodape">Site criado por <a href="https://github.com/heitorberge" target="_blank">Heitor Berg</a></div>
+    </div>
+</body>
+</html>
